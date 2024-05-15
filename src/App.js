@@ -16,6 +16,7 @@ import loadingImg from "./assets/loader.gif";
 import "./style.css";
 import Fiction from "./components/Fiction/Fiction";
 import Biography from "./components/Bio/Biography";
+import Authentication from "./components/Authentication/auth";
 
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -185,6 +186,9 @@ const App = () => {
                     onAddToCart={handleAddToCart}
                     handleUpdateCartQty
                   />
+                </Route>
+                <Route path="/login" exact>
+                  <Authentication/>
                 </Route>
               </Switch>
             </div>
